@@ -1,0 +1,4 @@
+int x;
+int y = x + 5;
+float z = 4.0;
+int f;int a;
