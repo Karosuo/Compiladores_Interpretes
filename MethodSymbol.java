@@ -12,7 +12,7 @@ public class MethodSymbol extends Symbol implements Scope{
 	
 	public String getScopeName(){return String.format("Local method %s()", this.getName());} //Returns the kind of scope and it's name, since it's a method
 	
-	public String getEnclosingScope(){return this.enclosingScope;}
+	public Scope getEnclosingScope(){return this.enclosingScope;}
 	
 	public void setDebugFlag(boolean flag){this.debug = flag;}
 	

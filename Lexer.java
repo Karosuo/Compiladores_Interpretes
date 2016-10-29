@@ -69,8 +69,10 @@ public abstract class Lexer {
 
 					tokens.add(new Token(tt, matcher.group(tt.getName())));
 
-					if (isIdentifier(tt.getName()))
-						symbolsTable.addSymbol(matcher.group(tt.getName()), tt.getName(), 0);
+					/**If it was a variable, add it to the sym table
+					 * But commented since the sym table will be filled on Parser*/
+					//if (isIdentifier(tt.getName()))
+						//symbolsTable.addSymbol(matcher.group(tt.getName()), tt.getName(), 0);
 
 					break;
 				}

@@ -38,7 +38,7 @@ public class SymbolsTable implements Scope{
 	
 	public String getScopeName(){return "Global";}
 	
-	public String getEnclosingScope(){return this.enclosingScope;}
+	public Scope getEnclosingScope(){return this.enclosingScope;}
 	
 	public void define(Symbol sym){symbols.put(sym.name,sym);
 			if(this.debug)

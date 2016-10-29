@@ -19,7 +19,7 @@ public class CymbolLexer extends Lexer {
 	}
 
 	protected boolean isIdentifier(String s) {
-		if (s.equals("IDENTIFIER"))
+		if (s.equals("VARIABLE"))
 			return true;
 
 		return false;
