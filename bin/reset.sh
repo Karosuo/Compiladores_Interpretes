@@ -2,6 +2,6 @@
 
 rm *.class
 cd ../
-javac TestCymbol.java -d ./bin
+javac -d ./bin TestCymbol.java
 cd bin
 java TestCymbol

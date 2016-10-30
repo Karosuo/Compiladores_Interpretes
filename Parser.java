@@ -57,7 +57,8 @@ abstract public class Parser {
 		for (int i=beginToken; i<endToken; i++)
 			elements.add(tokens.get(i));
 
-		tuples.add(new Tuple(type, elements, beginToken, nextTrue, nextFalse));
+		//tuples.add(new Tuple(type, elements, beginToken, nextTrue, nextFalse));
+		tuples.add(new Tuple(type, elements, nextTrue, nextFalse));
 	}
 }
 

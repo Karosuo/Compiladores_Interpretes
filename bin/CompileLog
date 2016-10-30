@@ -1,0 +1,302 @@
+********** Tokens **********
+
+(FLOAT,float)
+(VARIABLE,f)
+(LPARENTESIS,()
+(INT,int)
+(VARIABLE,x)
+(COMA,,)
+(INT,int)
+(VARIABLE,y)
+(RPARENTESIS,))
+(LKEY,{)
+(VARIABLE,return)
+(VARIABLE,y)
+(PUNTOYCOMA,;)
+(RKEY,})
+
+********** Grammar rules **********
+
+<Programa> ::= <Expresiones> 
+<Expresiones> ::= <Expresion> <Expresiones> 
+<Expresion> ::= <Tipo> VARIABLE IGUAL <Valor> PUNTOYCOMA 
+<Tipo> ::= INT 
+<Tipo> ::= FLOAT 
+Match: FLOAT
+Match: VARIABLE
+<Expresion> ::= <Tipo> VARIABLE PUNTOYCOMA 
+<Tipo> ::= INT 
+<Tipo> ::= FLOAT 
+Match: FLOAT
+Match: VARIABLE
+<Expresion> ::= <Tipo> VARIABLE IGUAL <Operacion> 
+<Tipo> ::= INT 
+<Tipo> ::= FLOAT 
+Match: FLOAT
+Match: VARIABLE
+<Expresion> ::= <Funcion> 
+<Funcion> ::= <Tipo> VARIABLE LPARENTESIS <ParametrosIn> RPARENTESIS LKEY <Expresiones> RETURN <Valor> PUNTOYCOMA RKEY 
+<Tipo> ::= INT 
+<Tipo> ::= FLOAT 
+Match: FLOAT
+Match: VARIABLE
+Match: LPARENTESIS
+<ParametrosIn> ::= <ParametroIn> COMA <ParametrosIn> 
+<ParametroIn> ::= <Tipo> VARIABLE 
+<Tipo> ::= INT 
+Match: INT
+Match: VARIABLE
+Match: COMA
+<ParametrosIn> ::= <ParametroIn> COMA <ParametrosIn> 
+<ParametroIn> ::= <Tipo> VARIABLE 
+<Tipo> ::= INT 
+Match: INT
+Match: VARIABLE
+<ParametrosIn> ::= <ParametroIn> 
+<ParametroIn> ::= <Tipo> VARIABLE 
+<Tipo> ::= INT 
+Match: INT
+Match: VARIABLE
+Match: RPARENTESIS
+Match: LKEY
+<Expresiones> ::= <Expresion> <Expresiones> 
+<Expresion> ::= <Tipo> VARIABLE IGUAL <Valor> PUNTOYCOMA 
+<Tipo> ::= INT 
+<Tipo> ::= FLOAT 
+<Expresion> ::= <Tipo> VARIABLE PUNTOYCOMA 
+<Tipo> ::= INT 
+<Tipo> ::= FLOAT 
+<Expresion> ::= <Tipo> VARIABLE IGUAL <Operacion> 
+<Tipo> ::= INT 
+<Tipo> ::= FLOAT 
+<Expresion> ::= <Funcion> 
+<Funcion> ::= <Tipo> VARIABLE LPARENTESIS <ParametrosIn> RPARENTESIS LKEY <Expresiones> RETURN <Valor> PUNTOYCOMA RKEY 
+<Tipo> ::= INT 
+<Tipo> ::= FLOAT 
+<Funcion> ::= <Tipo> VARIABLE LPARENTESIS RPARENTESIS LLAVEI <Expresiones> RETURN <Valor> PUNTOYCOMA RKEY 
+<Tipo> ::= INT 
+<Tipo> ::= FLOAT 
+<Funcion> ::= VOID VARIABLE LPARENTESIS <ParametrosIn> RPARENTESIS LKEY <Expresiones> RKEY 
+<Funcion> ::= VOID VARIABLE LPARENTESIS RPARENTESIS LKEY <Expresiones> RKEY 
+<Expresion> ::= <Bloques> 
+<Bloques> ::= LKEY <Bloque> <Bloques> RKEY 
+<Bloques> ::= LKEY <Bloque> RKEY 
+<Bloques> ::= LKEY <Expresiones> RKEY 
+<Expresion> ::= <Operacion> 
+<Operacion> ::= <Valor> OPERADOR <Operacion> 
+<Valor> ::= VARIABLE 
+Match: VARIABLE
+<Operacion> ::= <Valor> OPERADOR <Valor> PUNTOYCOMA 
+<Valor> ::= VARIABLE 
+Match: VARIABLE
+<Expresion> ::= <Invocacion> PUNTOYCOMA 
+<Invocacion> ::= VARIABLE LPARENTESIS <ParametrosOut> RPARENTESIS 
+Match: VARIABLE
+<Invocacion> ::= VARIABLE LPARENTESIS RPARENTESIS 
+Match: VARIABLE
+<Expresiones> ::= <Expresion> 
+<Expresion> ::= <Tipo> VARIABLE IGUAL <Valor> PUNTOYCOMA 
+<Tipo> ::= INT 
+<Tipo> ::= FLOAT 
+<Expresion> ::= <Tipo> VARIABLE PUNTOYCOMA 
+<Tipo> ::= INT 
+<Tipo> ::= FLOAT 
+<Expresion> ::= <Tipo> VARIABLE IGUAL <Operacion> 
+<Tipo> ::= INT 
+<Tipo> ::= FLOAT 
+<Expresion> ::= <Funcion> 
+<Funcion> ::= <Tipo> VARIABLE LPARENTESIS <ParametrosIn> RPARENTESIS LKEY <Expresiones> RETURN <Valor> PUNTOYCOMA RKEY 
+<Tipo> ::= INT 
+<Tipo> ::= FLOAT 
+<Funcion> ::= <Tipo> VARIABLE LPARENTESIS RPARENTESIS LLAVEI <Expresiones> RETURN <Valor> PUNTOYCOMA RKEY 
+<Tipo> ::= INT 
+<Tipo> ::= FLOAT 
+<Funcion> ::= VOID VARIABLE LPARENTESIS <ParametrosIn> RPARENTESIS LKEY <Expresiones> RKEY 
+<Funcion> ::= VOID VARIABLE LPARENTESIS RPARENTESIS LKEY <Expresiones> RKEY 
+<Expresion> ::= <Bloques> 
+<Bloques> ::= LKEY <Bloque> <Bloques> RKEY 
+<Bloques> ::= LKEY <Bloque> RKEY 
+<Bloques> ::= LKEY <Expresiones> RKEY 
+<Expresion> ::= <Operacion> 
+<Operacion> ::= <Valor> OPERADOR <Operacion> 
+<Valor> ::= VARIABLE 
+Match: VARIABLE
+<Operacion> ::= <Valor> OPERADOR <Valor> PUNTOYCOMA 
+<Valor> ::= VARIABLE 
+Match: VARIABLE
+<Expresion> ::= <Invocacion> PUNTOYCOMA 
+<Invocacion> ::= VARIABLE LPARENTESIS <ParametrosOut> RPARENTESIS 
+Match: VARIABLE
+<Invocacion> ::= VARIABLE LPARENTESIS RPARENTESIS 
+Match: VARIABLE
+<Funcion> ::= <Tipo> VARIABLE LPARENTESIS RPARENTESIS LLAVEI <Expresiones> RETURN <Valor> PUNTOYCOMA RKEY 
+<Tipo> ::= INT 
+<Tipo> ::= FLOAT 
+Match: FLOAT
+Match: VARIABLE
+Match: LPARENTESIS
+<Funcion> ::= VOID VARIABLE LPARENTESIS <ParametrosIn> RPARENTESIS LKEY <Expresiones> RKEY 
+<Funcion> ::= VOID VARIABLE LPARENTESIS RPARENTESIS LKEY <Expresiones> RKEY 
+<Expresion> ::= <Bloques> 
+<Bloques> ::= LKEY <Bloque> <Bloques> RKEY 
+<Bloques> ::= LKEY <Bloque> RKEY 
+<Bloques> ::= LKEY <Expresiones> RKEY 
+<Expresion> ::= <Operacion> 
+<Operacion> ::= <Valor> OPERADOR <Operacion> 
+<Valor> ::= VARIABLE 
+<Valor> ::= NUMERO 
+<Valor> ::= <Invocacion> 
+<Invocacion> ::= VARIABLE LPARENTESIS <ParametrosOut> RPARENTESIS 
+<Invocacion> ::= VARIABLE LPARENTESIS RPARENTESIS 
+<Operacion> ::= <Valor> OPERADOR <Valor> PUNTOYCOMA 
+<Valor> ::= VARIABLE 
+<Valor> ::= NUMERO 
+<Valor> ::= <Invocacion> 
+<Invocacion> ::= VARIABLE LPARENTESIS <ParametrosOut> RPARENTESIS 
+<Invocacion> ::= VARIABLE LPARENTESIS RPARENTESIS 
+<Expresion> ::= <Invocacion> PUNTOYCOMA 
+<Invocacion> ::= VARIABLE LPARENTESIS <ParametrosOut> RPARENTESIS 
+<Invocacion> ::= VARIABLE LPARENTESIS RPARENTESIS 
+<Expresiones> ::= <Expresion> 
+<Expresion> ::= <Tipo> VARIABLE IGUAL <Valor> PUNTOYCOMA 
+<Tipo> ::= INT 
+<Tipo> ::= FLOAT 
+Match: FLOAT
+Match: VARIABLE
+<Expresion> ::= <Tipo> VARIABLE PUNTOYCOMA 
+<Tipo> ::= INT 
+<Tipo> ::= FLOAT 
+Match: FLOAT
+Match: VARIABLE
+<Expresion> ::= <Tipo> VARIABLE IGUAL <Operacion> 
+<Tipo> ::= INT 
+<Tipo> ::= FLOAT 
+Match: FLOAT
+Match: VARIABLE
+<Expresion> ::= <Funcion> 
+<Funcion> ::= <Tipo> VARIABLE LPARENTESIS <ParametrosIn> RPARENTESIS LKEY <Expresiones> RETURN <Valor> PUNTOYCOMA RKEY 
+<Tipo> ::= INT 
+<Tipo> ::= FLOAT 
+Match: FLOAT
+Match: VARIABLE
+Match: LPARENTESIS
+<ParametrosIn> ::= <ParametroIn> COMA <ParametrosIn> 
+<ParametroIn> ::= <Tipo> VARIABLE 
+<Tipo> ::= INT 
+Match: INT
+Match: VARIABLE
+Match: COMA
+<ParametrosIn> ::= <ParametroIn> COMA <ParametrosIn> 
+<ParametroIn> ::= <Tipo> VARIABLE 
+<Tipo> ::= INT 
+Match: INT
+Match: VARIABLE
+<ParametrosIn> ::= <ParametroIn> 
+<ParametroIn> ::= <Tipo> VARIABLE 
+<Tipo> ::= INT 
+Match: INT
+Match: VARIABLE
+Match: RPARENTESIS
+Match: LKEY
+<Expresiones> ::= <Expresion> <Expresiones> 
+<Expresion> ::= <Tipo> VARIABLE IGUAL <Valor> PUNTOYCOMA 
+<Tipo> ::= INT 
+<Tipo> ::= FLOAT 
+<Expresion> ::= <Tipo> VARIABLE PUNTOYCOMA 
+<Tipo> ::= INT 
+<Tipo> ::= FLOAT 
+<Expresion> ::= <Tipo> VARIABLE IGUAL <Operacion> 
+<Tipo> ::= INT 
+<Tipo> ::= FLOAT 
+<Expresion> ::= <Funcion> 
+<Funcion> ::= <Tipo> VARIABLE LPARENTESIS <ParametrosIn> RPARENTESIS LKEY <Expresiones> RETURN <Valor> PUNTOYCOMA RKEY 
+<Tipo> ::= INT 
+<Tipo> ::= FLOAT 
+<Funcion> ::= <Tipo> VARIABLE LPARENTESIS RPARENTESIS LLAVEI <Expresiones> RETURN <Valor> PUNTOYCOMA RKEY 
+<Tipo> ::= INT 
+<Tipo> ::= FLOAT 
+<Funcion> ::= VOID VARIABLE LPARENTESIS <ParametrosIn> RPARENTESIS LKEY <Expresiones> RKEY 
+<Funcion> ::= VOID VARIABLE LPARENTESIS RPARENTESIS LKEY <Expresiones> RKEY 
+<Expresion> ::= <Bloques> 
+<Bloques> ::= LKEY <Bloque> <Bloques> RKEY 
+<Bloques> ::= LKEY <Bloque> RKEY 
+<Bloques> ::= LKEY <Expresiones> RKEY 
+<Expresion> ::= <Operacion> 
+<Operacion> ::= <Valor> OPERADOR <Operacion> 
+<Valor> ::= VARIABLE 
+Match: VARIABLE
+<Operacion> ::= <Valor> OPERADOR <Valor> PUNTOYCOMA 
+<Valor> ::= VARIABLE 
+Match: VARIABLE
+<Expresion> ::= <Invocacion> PUNTOYCOMA 
+<Invocacion> ::= VARIABLE LPARENTESIS <ParametrosOut> RPARENTESIS 
+Match: VARIABLE
+<Invocacion> ::= VARIABLE LPARENTESIS RPARENTESIS 
+Match: VARIABLE
+<Expresiones> ::= <Expresion> 
+<Expresion> ::= <Tipo> VARIABLE IGUAL <Valor> PUNTOYCOMA 
+<Tipo> ::= INT 
+<Tipo> ::= FLOAT 
+<Expresion> ::= <Tipo> VARIABLE PUNTOYCOMA 
+<Tipo> ::= INT 
+<Tipo> ::= FLOAT 
+<Expresion> ::= <Tipo> VARIABLE IGUAL <Operacion> 
+<Tipo> ::= INT 
+<Tipo> ::= FLOAT 
+<Expresion> ::= <Funcion> 
+<Funcion> ::= <Tipo> VARIABLE LPARENTESIS <ParametrosIn> RPARENTESIS LKEY <Expresiones> RETURN <Valor> PUNTOYCOMA RKEY 
+<Tipo> ::= INT 
+<Tipo> ::= FLOAT 
+<Funcion> ::= <Tipo> VARIABLE LPARENTESIS RPARENTESIS LLAVEI <Expresiones> RETURN <Valor> PUNTOYCOMA RKEY 
+<Tipo> ::= INT 
+<Tipo> ::= FLOAT 
+<Funcion> ::= VOID VARIABLE LPARENTESIS <ParametrosIn> RPARENTESIS LKEY <Expresiones> RKEY 
+<Funcion> ::= VOID VARIABLE LPARENTESIS RPARENTESIS LKEY <Expresiones> RKEY 
+<Expresion> ::= <Bloques> 
+<Bloques> ::= LKEY <Bloque> <Bloques> RKEY 
+<Bloques> ::= LKEY <Bloque> RKEY 
+<Bloques> ::= LKEY <Expresiones> RKEY 
+<Expresion> ::= <Operacion> 
+<Operacion> ::= <Valor> OPERADOR <Operacion> 
+<Valor> ::= VARIABLE 
+Match: VARIABLE
+<Operacion> ::= <Valor> OPERADOR <Valor> PUNTOYCOMA 
+<Valor> ::= VARIABLE 
+Match: VARIABLE
+<Expresion> ::= <Invocacion> PUNTOYCOMA 
+<Invocacion> ::= VARIABLE LPARENTESIS <ParametrosOut> RPARENTESIS 
+Match: VARIABLE
+<Invocacion> ::= VARIABLE LPARENTESIS RPARENTESIS 
+Match: VARIABLE
+<Funcion> ::= <Tipo> VARIABLE LPARENTESIS RPARENTESIS LLAVEI <Expresiones> RETURN <Valor> PUNTOYCOMA RKEY 
+<Tipo> ::= INT 
+<Tipo> ::= FLOAT 
+Match: FLOAT
+Match: VARIABLE
+Match: LPARENTESIS
+<Funcion> ::= VOID VARIABLE LPARENTESIS <ParametrosIn> RPARENTESIS LKEY <Expresiones> RKEY 
+<Funcion> ::= VOID VARIABLE LPARENTESIS RPARENTESIS LKEY <Expresiones> RKEY 
+<Expresion> ::= <Bloques> 
+<Bloques> ::= LKEY <Bloque> <Bloques> RKEY 
+<Bloques> ::= LKEY <Bloque> RKEY 
+<Bloques> ::= LKEY <Expresiones> RKEY 
+<Expresion> ::= <Operacion> 
+<Operacion> ::= <Valor> OPERADOR <Operacion> 
+<Valor> ::= VARIABLE 
+<Valor> ::= NUMERO 
+<Valor> ::= <Invocacion> 
+<Invocacion> ::= VARIABLE LPARENTESIS <ParametrosOut> RPARENTESIS 
+<Invocacion> ::= VARIABLE LPARENTESIS RPARENTESIS 
+<Operacion> ::= <Valor> OPERADOR <Valor> PUNTOYCOMA 
+<Valor> ::= VARIABLE 
+<Valor> ::= NUMERO 
+<Valor> ::= <Invocacion> 
+<Invocacion> ::= VARIABLE LPARENTESIS <ParametrosOut> RPARENTESIS 
+<Invocacion> ::= VARIABLE LPARENTESIS RPARENTESIS 
+<Expresion> ::= <Invocacion> PUNTOYCOMA 
+<Invocacion> ::= VARIABLE LPARENTESIS <ParametrosOut> RPARENTESIS 
+<Invocacion> ::= VARIABLE LPARENTESIS RPARENTESIS 
+
+Syntax is incorrect
+Expression: float f ( int x , int y ){ not found
+

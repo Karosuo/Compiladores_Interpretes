@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.lang.StringBuilder; //StringBuilder
 
 /*** Grammar
 
@@ -7,6 +8,7 @@ import java.util.ArrayList;
 <Expresiones> ::= <Expresion> 
 <Expresion> ::= <Tipo> VARIABLE IGUAL <Valor> PUNTOYCOMA 
 <Expresion> ::= <Tipo> VARIABLE PUNTOYCOMA 
+<Expresion> ::= <Tipo> VARIABLE IGUAL <Operacion> 
 <Expresion> ::= <Funcion> 
 <Expresion> ::= <Bloques> 
 <Expresion> ::= <Operacion> 
@@ -15,6 +17,7 @@ import java.util.ArrayList;
 <Operacion> ::= <Valor> OPERADOR <Valor> PUNTOYCOMA 
 <Bloques> ::= LKEY <Bloque> <Bloques> RKEY 
 <Bloques> ::= LKEY <Bloque> RKEY 
+<Bloques> ::= LKEY <Expresiones> RKEY 
 <Bloque> ::= LKEY <Expresiones> RKEY 
 <Invocacion> ::= VARIABLE LPARENTESIS <ParametrosOut> RPARENTESIS 
 <Invocacion> ::= VARIABLE LPARENTESIS RPARENTESIS 
@@ -63,6 +66,17 @@ public class CymbolParser extends Parser {
 		if (debug) {
 			System.out.println();
 			System.out.println("Syntax is incorrect");
+			
+			StringBuilder str = new StringBuilder(); //Whole Expression not found			
+			while(!(this.tokens.get(this.tokenIndex).getData().equals(";") || this.tokens.get(this.tokenIndex).getData().equals("{"))){ //Builds the expression, with all the tokens until PUNTOYCOMA
+				str.append(this.tokens.get(this.tokenIndex).getData());
+				str.append(" ");
+				this.tokenIndex++;
+			}
+			str.deleteCharAt(str.length()-1);//Strip off the space at the end
+			str.append(this.tokens.get(this.tokenIndex).getData());//Append the ";s"
+			
+			System.out.println(String.format("Expression: %s not found",str));
 			System.out.println();
 		}
 
@@ -144,6 +158,20 @@ public class CymbolParser extends Parser {
 			if (match("VARIABLE"))
 				if (match("PUNTOYCOMA"))
 					return true;
+
+		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex);
+
+		// <Expresion> ::= <Tipo> VARIABLE IGUAL <Operacion> 
+
+		if (debug) {
+			System.out.println("<Expresion> ::= <Tipo> VARIABLE IGUAL <Operacion> ");
+		}
+
+		if (Tipo())
+			if (match("VARIABLE"))
+				if (match("IGUAL"))
+					if (Operacion())
+						return true;
 
 		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex);
 
@@ -257,6 +285,19 @@ public class CymbolParser extends Parser {
 					return true;
 
 		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex);
+
+		// <Bloques> ::= LKEY <Expresiones> RKEY 
+
+		if (debug) {
+			System.out.println("<Bloques> ::= LKEY <Expresiones> RKEY ");
+		}
+
+		if (match("LKEY"))
+			if (Expresiones())
+				if (match("RKEY"))
+					return true;
+
+		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex);
 		return false;
 	}
 
@@ -270,6 +311,7 @@ public class CymbolParser extends Parser {
 			System.out.println("<Bloque> ::= LKEY <Expresiones> RKEY ");
 		}
 
+		
 		if (match("LKEY"))
 			if (Expresiones())
 				if (match("RKEY"))
