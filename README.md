@@ -1,2 +1,2 @@
-# Compiladores_Interpretes
-Proyecto de materia COMPILADORES en UABC, en semestre 2016-2. Muestra 1 ejemplo de análsis léxico, sintáctico y tabla de símbolos y el proyecto final de traducción entre el Lenguaj Logo y el robot spyro
+# Logo interpreter to Control Sphero for iphone
+It Also has an example of a nested symbol list for an invented language called Cymbol used in the class.
