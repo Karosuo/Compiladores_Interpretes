@@ -29,7 +29,7 @@ import Foundation
 <Condicional> ::= IFELSE <Condicion> <Expresiones> ELSE <Expresiones> 
 <Condicion> ::= USE VARIABLE EQU USE VARIABLE 
 <Condicion> ::= USE VARIABLE 
-<Avance> ::= GO <Direccion> UNITS 
+<Avance> ::= GO <Direccion> STEPS 
 <Direccion> ::= FORWARD 
 <Direccion> ::= BACKWARD 
 <Comando> GO 
@@ -39,7 +39,7 @@ import Foundation
 <Comando> NOT 
 <Comando> LEFT 
 <Comando> RIGHT 
-<Comando> UNITS 
+<Comando> STEPS 
 <Comando> NEW 
 <Comando> WORD 
 <Comando> START 
@@ -430,11 +430,11 @@ class C:\Users\Rafael Karosuo\Documents\UABC\2016-2\Compiladores_iOS\MetaInterpr
 		let tokenIndexAux: Int = tokenIndex
 		var tupleIndex: Int = tuples.count
 
-		// <Avance> ::= GO <Direccion> UNITS 
+		// <Avance> ::= GO <Direccion> STEPS 
 
 		if match("GO") {
 			if Direccion() {
-				if match("UNITS") {
+				if match("STEPS") {
 					return true
 				}
 			}
@@ -519,7 +519,7 @@ class C:\Users\Rafael Karosuo\Documents\UABC\2016-2\Compiladores_iOS\MetaInterpr
 
 		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
-		// <Comando> UNITS 
+		// <Comando> STEPS 
 
 		return true
 	}
