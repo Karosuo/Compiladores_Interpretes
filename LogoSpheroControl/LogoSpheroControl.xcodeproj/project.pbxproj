@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48E10CAE1E0C3813009484B5 /* Interpreter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E10CA21E0C3813009484B5 /* Interpreter.swift */; };
+		48E10CAF1E0C3813009484B5 /* KLogoExecution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E10CA31E0C3813009484B5 /* KLogoExecution.swift */; };
+		48E10CB01E0C3813009484B5 /* KLogoInterpreter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E10CA41E0C3813009484B5 /* KLogoInterpreter.swift */; };
+		48E10CB11E0C3813009484B5 /* KLogoLexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E10CA51E0C3813009484B5 /* KLogoLexer.swift */; };
+		48E10CB21E0C3813009484B5 /* KLogoParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E10CA61E0C3813009484B5 /* KLogoParser.swift */; };
+		48E10CB31E0C3813009484B5 /* Lexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E10CA71E0C3813009484B5 /* Lexer.swift */; };
+		48E10CB41E0C3813009484B5 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E10CA81E0C3813009484B5 /* Parser.swift */; };
+		48E10CB51E0C3813009484B5 /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E10CA91E0C3813009484B5 /* Symbol.swift */; };
+		48E10CB61E0C3813009484B5 /* SymbolsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E10CAA1E0C3813009484B5 /* SymbolsTable.swift */; };
+		48E10CB71E0C3813009484B5 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E10CAB1E0C3813009484B5 /* Token.swift */; };
+		48E10CB81E0C3813009484B5 /* TokenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E10CAC1E0C3813009484B5 /* TokenType.swift */; };
+		48E10CB91E0C3813009484B5 /* Tuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E10CAD1E0C3813009484B5 /* Tuple.swift */; };
 		F43417AA1E0B4925002E0CA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43417A91E0B4925002E0CA0 /* AppDelegate.swift */; };
 		F43417AC1E0B4925002E0CA0 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43417AB1E0B4925002E0CA0 /* FirstViewController.swift */; };
 		F43417AE1E0B4925002E0CA0 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43417AD1E0B4925002E0CA0 /* SecondViewController.swift */; };
@@ -18,6 +30,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		48E10CA21E0C3813009484B5 /* Interpreter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interpreter.swift; sourceTree = "<group>"; };
+		48E10CA31E0C3813009484B5 /* KLogoExecution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KLogoExecution.swift; sourceTree = "<group>"; };
+		48E10CA41E0C3813009484B5 /* KLogoInterpreter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KLogoInterpreter.swift; sourceTree = "<group>"; };
+		48E10CA51E0C3813009484B5 /* KLogoLexer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KLogoLexer.swift; sourceTree = "<group>"; };
+		48E10CA61E0C3813009484B5 /* KLogoParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KLogoParser.swift; sourceTree = "<group>"; };
+		48E10CA71E0C3813009484B5 /* Lexer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lexer.swift; sourceTree = "<group>"; };
+		48E10CA81E0C3813009484B5 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		48E10CA91E0C3813009484B5 /* Symbol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
+		48E10CAA1E0C3813009484B5 /* SymbolsTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolsTable.swift; sourceTree = "<group>"; };
+		48E10CAB1E0C3813009484B5 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		48E10CAC1E0C3813009484B5 /* TokenType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenType.swift; sourceTree = "<group>"; };
+		48E10CAD1E0C3813009484B5 /* Tuple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tuple.swift; sourceTree = "<group>"; };
 		F43417A61E0B4925002E0CA0 /* LogoSpheroControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogoSpheroControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43417A91E0B4925002E0CA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F43417AB1E0B4925002E0CA0 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +84,18 @@
 		F43417A81E0B4925002E0CA0 /* LogoSpheroControl */ = {
 			isa = PBXGroup;
 			children = (
+				48E10CA21E0C3813009484B5 /* Interpreter.swift */,
+				48E10CA31E0C3813009484B5 /* KLogoExecution.swift */,
+				48E10CA41E0C3813009484B5 /* KLogoInterpreter.swift */,
+				48E10CA51E0C3813009484B5 /* KLogoLexer.swift */,
+				48E10CA61E0C3813009484B5 /* KLogoParser.swift */,
+				48E10CA71E0C3813009484B5 /* Lexer.swift */,
+				48E10CA81E0C3813009484B5 /* Parser.swift */,
+				48E10CA91E0C3813009484B5 /* Symbol.swift */,
+				48E10CAA1E0C3813009484B5 /* SymbolsTable.swift */,
+				48E10CAB1E0C3813009484B5 /* Token.swift */,
+				48E10CAC1E0C3813009484B5 /* TokenType.swift */,
+				48E10CAD1E0C3813009484B5 /* Tuple.swift */,
 				F43417A91E0B4925002E0CA0 /* AppDelegate.swift */,
 				F43417AB1E0B4925002E0CA0 /* FirstViewController.swift */,
 				F43417AD1E0B4925002E0CA0 /* SecondViewController.swift */,
@@ -146,11 +182,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48E10CB91E0C3813009484B5 /* Tuple.swift in Sources */,
+				48E10CAE1E0C3813009484B5 /* Interpreter.swift in Sources */,
+				48E10CB01E0C3813009484B5 /* KLogoInterpreter.swift in Sources */,
 				F43417AE1E0B4925002E0CA0 /* SecondViewController.swift in Sources */,
 				F43417C01E0B64EA002E0CA0 /* Turtle.swift in Sources */,
 				F43417AA1E0B4925002E0CA0 /* AppDelegate.swift in Sources */,
+				48E10CB51E0C3813009484B5 /* Symbol.swift in Sources */,
+				48E10CB71E0C3813009484B5 /* Token.swift in Sources */,
+				48E10CB31E0C3813009484B5 /* Lexer.swift in Sources */,
 				F43417AC1E0B4925002E0CA0 /* FirstViewController.swift in Sources */,
 				F43417BE1E0B49AC002E0CA0 /* DrawLines.swift in Sources */,
+				48E10CB41E0C3813009484B5 /* Parser.swift in Sources */,
+				48E10CB11E0C3813009484B5 /* KLogoLexer.swift in Sources */,
+				48E10CAF1E0C3813009484B5 /* KLogoExecution.swift in Sources */,
+				48E10CB81E0C3813009484B5 /* TokenType.swift in Sources */,
+				48E10CB61E0C3813009484B5 /* SymbolsTable.swift in Sources */,
+				48E10CB21E0C3813009484B5 /* KLogoParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
