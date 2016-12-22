@@ -23,33 +23,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="turtle" translatesAutoresizingMaskIntoConstraints="NO" id="QnH-ks-MX2">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="turtle" translatesAutoresizingMaskIntoConstraints="NO" id="QnH-ks-MX2">
                                 <rect key="frame" x="5" y="5" width="22" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXG-BJ-QeD">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXG-BJ-QeD">
                                 <rect key="frame" x="184" y="567" width="175" height="51"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="51" id="ZKr-ZJ-fpz"/>
                                     <constraint firstAttribute="width" constant="175" id="tXT-IK-DZp"/>
                                     <constraint firstAttribute="width" secondItem="LXG-BJ-QeD" secondAttribute="height" multiplier="175:51" id="zTL-Qw-Kl0"/>
                                 </constraints>
-                                <state key="normal" title="Run"/>
+                                <state key="normal" title="Run">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="runTurtleDraw:" destination="9pv-A4-QxB" eventType="touchUpInside" id="R3i-dP-zOr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIK-pI-KIs">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIK-pI-KIs">
                                 <rect key="frame" x="16" y="567" width="167" height="51"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="MIK-pI-KIs" secondAttribute="height" multiplier="167:51" id="Y9s-lF-8nj"/>
                                     <constraint firstAttribute="height" constant="51" id="omk-ea-RpM"/>
                                     <constraint firstAttribute="width" constant="167" id="yH7-Ce-Pl3"/>
                                 </constraints>
-                                <state key="normal" title="Clear screen"/>
+                                <state key="normal" title="Clear screen">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QnH-ks-MX2" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" constant="5" id="4Od-xo-twK"/>
+                            <constraint firstItem="MIK-pI-KIs" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="ERf-ls-PeB"/>
+                            <constraint firstItem="MIK-pI-KIs" firstAttribute="baseline" secondItem="LXG-BJ-QeD" secondAttribute="baseline" id="Ohx-s8-LPM"/>
+                            <constraint firstItem="QnH-ks-MX2" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-11" id="XH6-Ol-s3V"/>
+                            <constraint firstItem="MIK-pI-KIs" firstAttribute="bottom" secondItem="4ug-Mw-9AY" secondAttribute="top" id="fl9-tZ-tf8"/>
+                            <constraint firstItem="LXG-BJ-QeD" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="gbF-jJ-nLW"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="play" id="acW-dT-cKf"/>
                     <connections>
@@ -78,6 +91,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="189" id="lhp-BZ-WFG"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="8rJ-Kc-sve" id="Kem-GQ-Gic"/>
+                                </connections>
                             </tableView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8N1-I2-3ow">
                                 <rect key="frame" x="16" y="207" width="343" height="358"/>
@@ -93,8 +109,9 @@ RIGHT 90
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hDk-Fc-nqf">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hDk-Fc-nqf">
                                 <rect key="frame" x="16" y="564" width="343" height="54"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hDk-Fc-nqf" secondAttribute="height" multiplier="343:54" id="GqV-aQ-obN"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="Jvc-eZ-UDZ"/>
@@ -102,7 +119,9 @@ RIGHT 90
                                     <constraint firstAttribute="width" constant="343" id="qcY-CS-bTH"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="54" id="z1d-Dd-NI3"/>
                                 </constraints>
-                                <state key="normal" title="Save"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
