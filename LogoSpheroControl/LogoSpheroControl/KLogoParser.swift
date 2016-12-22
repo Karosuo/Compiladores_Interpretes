@@ -60,7 +60,7 @@ import Foundation
 
 */
 
-class C:\Users\Rafael Karosuo\Documents\UABC\2016-2\Compiladores_iOS\MetaInterpreter\KLogoParser: Parser
+class KLogoParser : Parser{
 	override init() {
 		super.init()
 	}
@@ -88,7 +88,7 @@ class C:\Users\Rafael Karosuo\Documents\UABC\2016-2\Compiladores_iOS\MetaInterpr
 			return true
 		}
 
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 		return false
 	}
 
@@ -104,7 +104,7 @@ class C:\Users\Rafael Karosuo\Documents\UABC\2016-2\Compiladores_iOS\MetaInterpr
 			}
 		}
 
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Expresiones> ::= <Expresion> 
 
@@ -112,7 +112,7 @@ class C:\Users\Rafael Karosuo\Documents\UABC\2016-2\Compiladores_iOS\MetaInterpr
 			return true
 		}
 
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 		return false
 	}
 
@@ -130,7 +130,7 @@ class C:\Users\Rafael Karosuo\Documents\UABC\2016-2\Compiladores_iOS\MetaInterpr
 			}
 		}
 
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Expresion> ::= MAKE STRING <Operacion> 
 
@@ -142,7 +142,7 @@ class C:\Users\Rafael Karosuo\Documents\UABC\2016-2\Compiladores_iOS\MetaInterpr
 			}
 		}
 
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Expresion> ::= <Comando> 
 
@@ -150,7 +150,7 @@ class C:\Users\Rafael Karosuo\Documents\UABC\2016-2\Compiladores_iOS\MetaInterpr
 			return true
 		}
 
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Expresion> ::= <Comando> <Bloques> 
 
@@ -160,7 +160,7 @@ class C:\Users\Rafael Karosuo\Documents\UABC\2016-2\Compiladores_iOS\MetaInterpr
 			}
 		}
 
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Expresion> ::= <Comando> NUMBER 
 
@@ -170,7 +170,7 @@ class C:\Users\Rafael Karosuo\Documents\UABC\2016-2\Compiladores_iOS\MetaInterpr
 			}
 		}
 
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Expresion> ::= <Condicional> 
 
@@ -178,7 +178,7 @@ class C:\Users\Rafael Karosuo\Documents\UABC\2016-2\Compiladores_iOS\MetaInterpr
 			return true
 		}
 
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Expresion> ::= <Ciclo> 
 
@@ -186,7 +186,7 @@ class C:\Users\Rafael Karosuo\Documents\UABC\2016-2\Compiladores_iOS\MetaInterpr
 			return true
 		}
 
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Expresion> ::= <Avance> 
 
@@ -194,7 +194,7 @@ class C:\Users\Rafael Karosuo\Documents\UABC\2016-2\Compiladores_iOS\MetaInterpr
 			return true
 		}
 
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Expresion> ::= <Operacion> 
 
@@ -202,7 +202,7 @@ class C:\Users\Rafael Karosuo\Documents\UABC\2016-2\Compiladores_iOS\MetaInterpr
 			return true
 		}
 
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Expresion> ::= <Bloques> 
 
@@ -210,7 +210,7 @@ class C:\Users\Rafael Karosuo\Documents\UABC\2016-2\Compiladores_iOS\MetaInterpr
 			return true
 		}
 
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 		return false
 	}
 
@@ -230,7 +230,7 @@ class C:\Users\Rafael Karosuo\Documents\UABC\2016-2\Compiladores_iOS\MetaInterpr
 			}
 		}
 
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Bloques> ::= LKEY <Bloque> RKEY 
 
@@ -242,7 +242,7 @@ class C:\Users\Rafael Karosuo\Documents\UABC\2016-2\Compiladores_iOS\MetaInterpr
 			}
 		}
 
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Bloques> ::= LKEY <Expresiones> RKEY 
 
@@ -254,7 +254,7 @@ class C:\Users\Rafael Karosuo\Documents\UABC\2016-2\Compiladores_iOS\MetaInterpr
 			}
 		}
 
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 		return false
 	}
 
@@ -272,7 +272,7 @@ class C:\Users\Rafael Karosuo\Documents\UABC\2016-2\Compiladores_iOS\MetaInterpr
 			}
 		}
 
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 		return false
 	}
 
@@ -290,7 +290,7 @@ class C:\Users\Rafael Karosuo\Documents\UABC\2016-2\Compiladores_iOS\MetaInterpr
 			}
 		}
 
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Operacion> ::= USE VARIABLE OPERADOR USE VARIABLE 
 
@@ -306,7 +306,7 @@ class C:\Users\Rafael Karosuo\Documents\UABC\2016-2\Compiladores_iOS\MetaInterpr
 			}
 		}
 
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 		return false
 	}
 
@@ -322,7 +322,7 @@ class C:\Users\Rafael Karosuo\Documents\UABC\2016-2\Compiladores_iOS\MetaInterpr
 			}
 		}
 
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Valor> ::= NUMERO 
 
@@ -330,7 +330,7 @@ class C:\Users\Rafael Karosuo\Documents\UABC\2016-2\Compiladores_iOS\MetaInterpr
 			return true
 		}
 
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Valor> ::= STRING 
 
@@ -338,7 +338,7 @@ class C:\Users\Rafael Karosuo\Documents\UABC\2016-2\Compiladores_iOS\MetaInterpr
 			return true
 		}
 
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 		return false
 	}
 
@@ -356,7 +356,7 @@ class C:\Users\Rafael Karosuo\Documents\UABC\2016-2\Compiladores_iOS\MetaInterpr
 			}
 		}
 
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 		return false
 	}
 
@@ -374,7 +374,7 @@ class C:\Users\Rafael Karosuo\Documents\UABC\2016-2\Compiladores_iOS\MetaInterpr
 			}
 		}
 
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Condicional> ::= IFELSE <Condicion> <Expresiones> ELSE <Expresiones> 
 
@@ -390,7 +390,7 @@ class C:\Users\Rafael Karosuo\Documents\UABC\2016-2\Compiladores_iOS\MetaInterpr
 			}
 		}
 
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 		return false
 	}
 
@@ -412,7 +412,7 @@ class C:\Users\Rafael Karosuo\Documents\UABC\2016-2\Compiladores_iOS\MetaInterpr
 			}
 		}
 
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Condicion> ::= USE VARIABLE 
 
@@ -422,7 +422,7 @@ class C:\Users\Rafael Karosuo\Documents\UABC\2016-2\Compiladores_iOS\MetaInterpr
 			}
 		}
 
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 		return false
 	}
 
@@ -440,7 +440,7 @@ class C:\Users\Rafael Karosuo\Documents\UABC\2016-2\Compiladores_iOS\MetaInterpr
 			}
 		}
 
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 		return false
 	}
 
@@ -454,7 +454,7 @@ class C:\Users\Rafael Karosuo\Documents\UABC\2016-2\Compiladores_iOS\MetaInterpr
 			return true
 		}
 
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Direccion> ::= BACKWARD 
 
@@ -462,7 +462,7 @@ class C:\Users\Rafael Karosuo\Documents\UABC\2016-2\Compiladores_iOS\MetaInterpr
 			return true
 		}
 
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 		return false
 	}
 
@@ -471,179 +471,179 @@ class C:\Users\Rafael Karosuo\Documents\UABC\2016-2\Compiladores_iOS\MetaInterpr
 		var tupleIndex: Int = tuples.count
 
 		// <Comando> GO 
+        if match("GO") {
+            return true
+        }
+        
 
-		return true
-	}
-
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
-
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+        
+    
 		// <Comando> REPEAT 
 
-		return true
-	}
+        if match("REPEAT") {
+            return true
+        }
 
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Comando> FORWARD 
+        if match("FORWARD") {
+            return true
+        }
 
-		return true
-	}
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		// <Comando> BACKWARD
+        if match("BACKWARD") {
+            return true
+        }
 
-		// <Comando> BACKWARD 
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
-		return true
-	}
+		// <Comando> NOT
+        if match("NOT") {
+            return true
+        }
 
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
-
-		// <Comando> NOT 
-
-		return true
-	}
-
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Comando> LEFT 
+        if match("LEFT") {
+            return true
+        }
 
-		return true
-	}
-
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Comando> RIGHT 
+        if match("RIGHT") {
+            return true
+        }
 
-		return true
-	}
-
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Comando> STEPS 
+        if match("STEPS") {
+            return true
+        }
 
-		return true
-	}
-
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Comando> NEW 
-
-		return true
-	}
-
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+        if match("NEW") {
+            return true
+        }
+        
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Comando> WORD 
+        if match("WORD") {
+            return true
+        }
 
-		return true
-	}
-
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Comando> START 
+        if match("START") {
+            return true
+        }
 
-		return true
-	}
-
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Comando> END 
+        if match("END") {
+            return true
+        }
 
-		return true
-	}
-
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Comando> PENUP 
+        if match("PENUP") {
+            return true
+        }
 
-		return true
-	}
-
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Comando> PENDOWN 
+        if match("PENDOWN") {
+            return true
+        }
 
-		return true
-	}
-
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Comando> HOME 
-
-		return true
-	}
-
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+        if match("HOME") {
+            return true
+        }
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Comando> CLS 
+        if match("CLS") {
+            return true
+        }
 
-		return true
-	}
-
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Comando> PRINT 
+        if match("PRINT") {
+            return true
+        }
 
-		return true
-	}
-
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Comando> BYE 
+        if match("BYE") {
+            return true
+        }
 
-		return true
-	}
-
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Comando> REPCOUNT 
-
-		return true
-	}
-
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+        if match("REPCOUNT") {
+            return true
+        }
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Comando> IF 
-
-		return true
-	}
-
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+        if match("IF") {
+            return true
+        }
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Comando> IFELSE 
+        if match("IFELSE") {
+            return true
+        }
 
-		return true
-	}
-
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Comando> SIN 
+        if match("SIN") {
+            return true
+        }
 
-		return true
-	}
-
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Comando> COS 
+        if match("COS") {
+            return true
+        }
 
-		return true
-	}
-
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Comando> MAKE 
+        if match("MAKE") {
+            return true
+        }
 
-		return true
-	}
-
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 
 		// <Comando> COLOR 
+        if match("COLOR") {
+            return true
+        }
 
-		return true
-	}
-
-		tupleIndex = resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
+		tupleIndex = super.resetIndexes(tokenIndexAux, tupleIndex:tupleIndex)
 		return false
 	}
 
