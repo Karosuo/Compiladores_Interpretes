@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,17 +27,25 @@
                                 <rect key="frame" x="5" y="5" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXG-BJ-QeD">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXG-BJ-QeD">
                                 <rect key="frame" x="184" y="567" width="175" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="ZKr-ZJ-fpz"/>
+                                    <constraint firstAttribute="width" constant="175" id="tXT-IK-DZp"/>
+                                    <constraint firstAttribute="width" secondItem="LXG-BJ-QeD" secondAttribute="height" multiplier="175:51" id="zTL-Qw-Kl0"/>
+                                </constraints>
                                 <state key="normal" title="Run"/>
                                 <connections>
                                     <action selector="runTurtleDraw:" destination="9pv-A4-QxB" eventType="touchUpInside" id="R3i-dP-zOr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIK-pI-KIs">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIK-pI-KIs">
                                 <rect key="frame" x="16" y="567" width="167" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="MIK-pI-KIs" secondAttribute="height" multiplier="167:51" id="Y9s-lF-8nj"/>
+                                    <constraint firstAttribute="height" constant="51" id="omk-ea-RpM"/>
+                                    <constraint firstAttribute="width" constant="167" id="yH7-Ce-Pl3"/>
+                                </constraints>
                                 <state key="normal" title="Clear screen"/>
                             </button>
                         </subviews>
@@ -62,20 +72,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgz-Nv-Nzm">
-                                <rect key="frame" x="16" y="564" width="343" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Save"/>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ly5-jz-O0a">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ly5-jz-O0a">
                                 <rect key="frame" x="16" y="20" width="343" height="189"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="189" id="lhp-BZ-WFG"/>
+                                </constraints>
                             </tableView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8N1-I2-3ow">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8N1-I2-3ow">
                                 <rect key="frame" x="16" y="207" width="343" height="358"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">GO FORWARD 50 STEPS
 LEFT 90
 GO FORWARD 20 STEPS
@@ -87,8 +93,30 @@ RIGHT 90
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hDk-Fc-nqf">
+                                <rect key="frame" x="16" y="564" width="343" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hDk-Fc-nqf" secondAttribute="height" multiplier="343:54" id="GqV-aQ-obN"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="Jvc-eZ-UDZ"/>
+                                    <constraint firstAttribute="height" constant="54" id="MYC-3m-aX6"/>
+                                    <constraint firstAttribute="width" constant="343" id="qcY-CS-bTH"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="54" id="z1d-Dd-NI3"/>
+                                </constraints>
+                                <state key="normal" title="Save"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hDk-Fc-nqf" firstAttribute="bottom" secondItem="Djb-ko-YwX" secondAttribute="top" id="ALE-HJ-CYz"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="8N1-I2-3ow" secondAttribute="bottom" constant="53" id="NAY-Ly-Ax7"/>
+                            <constraint firstItem="8N1-I2-3ow" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="187" id="O0z-CT-I1p"/>
+                            <constraint firstItem="Ly5-jz-O0a" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="Xqx-pI-h4e"/>
+                            <constraint firstItem="Ly5-jz-O0a" firstAttribute="trailing" secondItem="8N1-I2-3ow" secondAttribute="trailing" id="YpU-ED-s7m"/>
+                            <constraint firstItem="8N1-I2-3ow" firstAttribute="leading" secondItem="hDk-Fc-nqf" secondAttribute="leading" id="ZZW-Ot-VLM"/>
+                            <constraint firstItem="Ly5-jz-O0a" firstAttribute="leading" secondItem="8N1-I2-3ow" secondAttribute="leading" id="b9G-34-qsj"/>
+                            <constraint firstItem="8N1-I2-3ow" firstAttribute="trailing" secondItem="hDk-Fc-nqf" secondAttribute="trailing" id="dWh-Us-Ahx"/>
+                            <constraint firstItem="Ly5-jz-O0a" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="zRw-XZ-1Ql"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Code" image="code" id="cPa-gy-q4n"/>
                 </viewController>
