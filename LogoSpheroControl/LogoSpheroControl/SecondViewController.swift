@@ -10,6 +10,9 @@ import UIKit
 
 class SecondViewController: UIViewController, UITableViewDataSource {
 
+    
+    @IBOutlet weak var codeContainer: UITextView!
+    
     let commands = [
         ("GO", "GO"),
         ("FORWARD", "FORWARD"),
@@ -61,6 +64,22 @@ class SecondViewController: UIViewController, UITableViewDataSource {
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
+    }
+    @IBAction func InterpretCode(sender: AnyObject) {
+        let parent : AnyObject = "This is temporal" as String
+        let engine : KLogoExecution = KLogoExecution()
+        let result = engine.execute(codeContainer.text, source: false, debug: true, parent: parent)
+        var myAlert = UIAlertController(title: "Program Check Result", message: result, preferredStyle: UIAlertControllerStyle.Alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default){
+            (ACTION) in print("OK button tapped")
+        }
+        
+        myAlert.addAction(okAction)
+        
+        self.presentViewController(myAlert, animated: true, completion: nil)
+        
+        print(result)
     }
 
 }
