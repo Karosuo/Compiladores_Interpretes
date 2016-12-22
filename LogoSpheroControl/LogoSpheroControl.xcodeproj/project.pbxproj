@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -105,13 +105,13 @@
 				TargetAttributes = {
 					F43417A51E0B4925002E0CA0 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 2HSRAGGGFF;
+						DevelopmentTeam = 8UKYCXL883;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = F43417A11E0B4925002E0CA0 /* Build configuration list for PBXProject "LogoSpheroControl" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -271,7 +271,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2HSRAGGGFF;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8UKYCXL883;
 				INFOPLIST_FILE = LogoSpheroControl/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Karosuo.LogoSpheroControl;
@@ -284,7 +286,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2HSRAGGGFF;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8UKYCXL883;
 				INFOPLIST_FILE = LogoSpheroControl/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Karosuo.LogoSpheroControl;
@@ -312,6 +316,7 @@
 				F43417BC1E0B4925002E0CA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
