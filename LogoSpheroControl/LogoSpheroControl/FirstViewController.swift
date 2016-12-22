@@ -8,9 +8,12 @@
 
 import UIKit
 
+
 class FirstViewController: UIViewController {
     @IBOutlet weak var UITurtle: UIImageView!
-
+    
+    var theTurtle : Turtle = Turtle()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -22,19 +25,18 @@ class FirstViewController: UIViewController {
     }
 
     @IBAction func runTurtleDraw(sender: AnyObject){
-        let theTurtle : Turtle = Turtle()
         
-        /*UIView.animateWithDuration(0.5, animations: ({
+        /*
+        UIView.animateWithDuration(0.5, animations: ({
             self.UITurtle.transform =
-                CGAffineTransformMakeRotation(CGFloat(theTurtle.getTurtleOrientation()))
-            theTurtle.setTurtleOrientation(theTurtle.getTurtleOrientation()+1)
+                CGAffineTransformMakeRotation(CGFloat(self.theTurtle.getTurtleOrientation()))
+            self.theTurtle.setTurtleOrientation(self.theTurtle.getTurtleOrientation()+1)
+            print("\(self.theTurtle.getTurtleOrientation())")
         }))*/
-        theTurtle.setTurtleOrientation(1)
-        print("\(theTurtle.getTurtleOrientation())")
-        theTurtle.setTurtleOrientation(theTurtle.getTurtleOrientation()+2)
-        print("\(theTurtle.getTurtleOrientation())")
-        theTurtle.setTurtleOrientation(theTurtle.getTurtleOrientation()+2)
-        print("\(theTurtle.getTurtleOrientation())")
+        UITurtle.transform =
+            CGAffineTransformMakeRotation(CGFloat(DrawLines.degToRad(Double(theTurtle.getTurtleOrientation()))))
+        print("\(CGFloat(DrawLines.degToRad(Double(theTurtle.getTurtleOrientation()))))")
+        theTurtle.setTurtleOrientation(theTurtle.getTurtleOrientation()+1)
         
     }
 

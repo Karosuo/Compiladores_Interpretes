@@ -23,12 +23,16 @@ class DrawLines: UIView {
         //drawTurtlePath(30, y1: 30, distance: 50)
     }
     
-    func sind (degrees: Double) -> Double{
+    static func sind (degrees: Double) -> Double{
         return sin(degrees * M_PI / 180.0)
     }
     
-    func cosd (degrees: Double) -> Double{
+    static func cosd (degrees: Double) -> Double{
         return cos(degrees * M_PI / 180.0)
+    }
+    
+    static func degToRad(degrees: Double) -> Double{
+        return M_PI * degrees / 180.0
     }
     
     func drawTurtlePath(x1: Int, y1: Int, distance: Int, theTurtle: Turtle){
