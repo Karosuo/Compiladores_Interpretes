@@ -1,14 +1,14 @@
 //
-//  FirstViewController.swift
+//  SecondViewController.swift
 //  LogoSpheroControl
 //
-//  Created by imac on 20/12/16.
+//  Created by imac on 21/12/16.
 //  Copyright © 2016 STR. All rights reserved.
 //
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,10 +20,6 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    
-    @IBAction func btnPressed(sender: UIButton) {
-        // do your stuff over here
-    }
 
 }
 

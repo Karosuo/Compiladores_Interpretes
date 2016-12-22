@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F456559C1E0A1C9300FCB35C"
+               BlueprintIdentifier = "F43417A51E0B4925002E0CA0"
                BuildableName = "LogoSpheroControl.app"
                BlueprintName = "LogoSpheroControl"
                ReferencedContainer = "container:LogoSpheroControl.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F456559C1E0A1C9300FCB35C"
+            BlueprintIdentifier = "F43417A51E0B4925002E0CA0"
             BuildableName = "LogoSpheroControl.app"
             BlueprintName = "LogoSpheroControl"
             ReferencedContainer = "container:LogoSpheroControl.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F456559C1E0A1C9300FCB35C"
+            BlueprintIdentifier = "F43417A51E0B4925002E0CA0"
             BuildableName = "LogoSpheroControl.app"
             BlueprintName = "LogoSpheroControl"
             ReferencedContainer = "container:LogoSpheroControl.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F456559C1E0A1C9300FCB35C"
+            BlueprintIdentifier = "F43417A51E0B4925002E0CA0"
             BuildableName = "LogoSpheroControl.app"
             BlueprintName = "LogoSpheroControl"
             ReferencedContainer = "container:LogoSpheroControl.xcodeproj">

@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  LogoSpheroControl
 //
-//  Created by imac on 20/12/16.
+//  Created by imac on 21/12/16.
 //  Copyright © 2016 STR. All rights reserved.
 //
 
